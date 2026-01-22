@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive EITC Tutorial & Quiz</title>
+<style>
+  body { font-family: Arial, sans-serif; background:#eef2f7; margin:0; padding:0; }
+  header { background:#003366; color:#fff; padding:20px; display:flex; align-items:center; flex-wrap:wrap; }
+  header img { height:50px; margin-right:15px; }
+  header h1 { font-size:24px; margin:0; }
+  .container { max-width:900px; margin:20px auto; padding:10px; }
+  .card { background:#fff; border-radius:10px; padding:20px; margin-bottom:25px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+  h2 { color:#003366; margin-bottom:10px; }
+  p { line-height:1.6; }
+  .question { margin-top:15px; }
+  button { padding:10px 18px; margin:5px 5px 10px 0; border:none; border-radius:5px; cursor:pointer; background:#007bff; color:#fff; font-weight:bold; }
+  button:hover { background:#0056b3; }
+  .correct { color:green; font-weight:bold; }
+  .incorrect { color:red; font-weight:bold; }
+  .score { font-size:20px; font-weight:bold; margin-top:20px; text-align:center; color:#003366; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://www.hrblock.com/tax-offices/local-offices/redirect-tp-bio?tpname=Chris_Wackrow_1" target="_blank">
+    <img src="https://raw.githubusercontent.com/wack173900/eitc-quiz/main/index.html.jpg" alt="H&R Block Logo">
+  </a>
+  <h1>Interactive EITC Tutorial & Quiz</h1>
+</header>
+
+<div class="container">
+
+<div class="card">
+  <h2>Lesson 1: Introduction to EITC</h2>
+  <p>The Earned Income Tax Credit (EITC) is a refundable tax credit for low-to-moderate-income workers. It can reduce taxes owed and potentially result in a refund.</p>
+
+  <div class="question">
+    <p><strong>Question 1:</strong> The EITC is refundable. Which is correct?</p>
+    <button onclick="answerQuestion('q1', 'A', 'Correct! The EITC is refundable, meaning it can increase your refund even if you owe no tax.')">A. True</button>
+    <button onclick="answerQuestion('q1', 'B', 'Incorrect. The EITC is refundable.')">B. False</button>
+    <p id="q1"></p>
+  </div>
+
+  <div class="question">
+    <p><strong>Question 2:</strong> A 23-year-old taxpayer with no children can claim the EITC. True or False?</p>
+    <button onclick="answerQuestion('q2', 'A', 'Incorrect. Taxpayers without qualifying children must be at least 25.')">A. True</button>
+    <button onclick="answerQuestion('q2', 'B', 'Correct! Childless taxpayers must be at least 25 years old to qualify.')">B. False</button>
+    <p id="q2"></p>
+  </div>
+
+  <div class="question">
+    <p><strong>Question 3:</strong> Earned income is required to qualify. True or False?</p>
+    <button onclick="answerQuestion('q3', 'A', 'Correct! You must have earned income to claim the EITC.')">A. True</button>
+    <button onclick="answerQuestion('q3', 'B', 'Incorrect. Earned income is always required.')">B. False</button>
+    <p id="q3"></p>
+  </div>
+
+  <div class="question">
+    <p><strong>Question 4:</strong> Married taxpayers filing separately can claim the EITC. True or False?</p>
+    <button onclick="answerQuestion('q4', 'A', 'Correct! Generally, married filing separately disqualifies the EITC. Exception: legally separated and treated as unmarried with a qualifying child may qualify.')">A. False</button>
+    <button onclick="answerQuestion('q4', 'B', 'Incorrect. Most MFS filers cannot claim the EITC.')">B. True</button>
+    <p id="q4"></p>
+  </div>
+
+  <div class="question">
+    <p><strong>Question 5:</strong> Having a qualifying child increases the EITC. Which is correct?</p>
+    <button onclick="answerQuestion('q5', 'A', 'Correct! More qualifying children = higher EITC.')">A. True</button>
+    <button onclick="answerQuestion('q5', 'B', 'Incorrect. Children increase the credit.')">B. False</button>
+    <p id="q5"></p>
+  </div>
+
+  <div class="question">
+    <p><strong>Question 6:</strong> EITC has income limits. True or False?</p>
+    <button onclick="answerQuestion('q6', 'A', 'Correct! Only taxpayers under the income limit can qualify.')">A. True</button>
+    <button onclick="answerQuestion('q6', 'B', 'Incorrect. Income limits always apply.')">B. False</button>
+    <p id="q6"></p>
+  </div>
+
+  <div class="question">
+    <p><strong>Question 7:</strong> Investment income above the limit disqualifies you. True or False?</p>
+    <button onclick="answerQuestion('q7', 'A', 'Incorrect. Investment income above the limit disqualifies.')">A. True</button>
+    <button onclick="answerQuestion('q7', 'B', 'Correct! Yes, high investment income disqualifies.')">B. False</button>
+    <p id="q7"></p>
+  </div>
+
+  <div class="question">
+    <p><strong>Question 8:</strong> Child’s SSN is required to claim EITC. True or False?</p>
+    <button onclick="answerQuestion('q8', 'A', 'Correct! Each qualifying child must have a valid SSN.')">A. True</button>
+    <button onclick="answerQuestion('q8', 'B', 'Incorrect. SSN is required.')">B. False</button>
+    <p id="q8"></p>
+  </div>
+
+  <div class="question">
+    <p><strong>Question 9:</strong> True or False: EITC is refundable even if you owe no tax.</p>
+    <button onclick="answerQuestion('q9', 'A', 'Correct! Refundable credits apply even with zero tax.')">A. True</button>
+    <button onclick="answerQuestion('q9', 'B', 'Incorrect. Refundable credits do apply.')">B. False</button>
+    <p id="q9"></p>
+  </div>
+
+  <div class="question">
+    <p><strong>Question 10:</strong> More qualifying children = higher credit. True or False?</p>
+    <button onclick="answerQuestion('q10', 'A', 'Correct! Each child increases the potential EITC.')">A. True</button>
+    <button onclick="answerQuestion('q10', 'B', 'Incorrect. More children increase the credit.')">B. False</button>
+    <p id="q10"></p>
+  </div>
+</div>
+
+<div class="score" id="totalScore">Total Score: 0 / 10</div>
+
+<script>
+let score = 0;
+const answeredQuestions = {};
+function answerQuestion(id, correctOption, explanation){
+  if(answeredQuestions[id]) return;
+  answeredQuestions[id] = true;
+  const p = document.getElementById(id);
+  const selected = event.target.innerText.split(".")[0];
+  if(selected === correctOption){
+    p.innerHTML = `<span class="correct">Correct ✔</span><br><em>${explanation}</em>`;
+    score++;
+  } else {
+    p.innerHTML = `<span class="incorrect">Incorrect ✘</span><br><em>${explanation}</em>`;
+  }
+  document.getElementById('totalScore').innerText = `Total Score: ${score} / 10`;
+}
+</script>
+
+</div> <!-- container -->
+</body>
+</html>
